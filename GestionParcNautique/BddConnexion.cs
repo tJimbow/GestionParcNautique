@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,11 +43,6 @@ namespace GestionParcNautique
             return reader;
 
         }
-
-        public string Requette()
-        {
-            string requette = "SELECT idsalarie,nom,prenom FROM salaries";
-            return requette;
-        }
+        
     }
 }
