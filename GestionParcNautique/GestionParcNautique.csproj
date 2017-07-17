@@ -88,6 +88,9 @@
     <EmbeddedResource Include="MenuAccueil.resx">
       <DependentUpon>MenuAccueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuClient.resx">
+      <DependentUpon>MenuClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

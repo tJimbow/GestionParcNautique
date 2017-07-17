@@ -15,6 +15,13 @@ namespace GestionParcNautique
         public MenuClient()
         {
             InitializeComponent();
+            MenuAccueil menuAccueil = new MenuAccueil();
+            //this.OnFormClosing(menuAccueil.Show());
+        }
+
+        private void MenuClient_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

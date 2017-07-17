@@ -47,31 +47,35 @@
             resources.ApplyResources(this.btnGestaEquip, "btnGestaEquip");
             this.btnGestaEquip.Name = "btnGestaEquip";
             this.btnGestaEquip.UseVisualStyleBackColor = true;
-            this.btnGestaEquip.Click += new System.EventHandler(this.button1_Click);
+            this.btnGestaEquip.Click += new System.EventHandler(this.btnGestaEquip_Click);
             // 
             // btnGestaEffectif
             // 
             resources.ApplyResources(this.btnGestaEffectif, "btnGestaEffectif");
             this.btnGestaEffectif.Name = "btnGestaEffectif";
             this.btnGestaEffectif.UseVisualStyleBackColor = true;
+            this.btnGestaEffectif.Click += new System.EventHandler(this.btnGestaEffectif_Click);
             // 
             // btnGestaResa
             // 
             resources.ApplyResources(this.btnGestaResa, "btnGestaResa");
             this.btnGestaResa.Name = "btnGestaResa";
             this.btnGestaResa.UseVisualStyleBackColor = true;
+            this.btnGestaResa.Click += new System.EventHandler(this.btnGestaResa_Click);
             // 
             // btnGestaClient
             // 
             resources.ApplyResources(this.btnGestaClient, "btnGestaClient");
             this.btnGestaClient.Name = "btnGestaClient";
             this.btnGestaClient.UseVisualStyleBackColor = true;
+            this.btnGestaClient.Click += new System.EventHandler(this.btnGestaClient_Click);
             // 
             // BntQuitter
             // 
             resources.ApplyResources(this.BntQuitter, "BntQuitter");
             this.BntQuitter.Name = "BntQuitter";
             this.BntQuitter.UseVisualStyleBackColor = true;
+            this.BntQuitter.Click += new System.EventHandler(this.BntQuitter_Click);
             // 
             // MenuAccueil
             // 

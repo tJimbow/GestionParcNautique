@@ -17,9 +17,37 @@ namespace GestionParcNautique
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGestaEquip_Click(object sender, EventArgs e)
         {
-
+            MenuEquipement menuEquipement = new MenuEquipement();
+            menuEquipement.Show();
+            this.Hide();
         }
+
+        private void btnGestaEffectif_Click(object sender, EventArgs e)
+        {
+            MenuEffectif menuEffectif = new MenuEffectif();
+            menuEffectif.Show();
+            this.Hide();
+        }
+
+        private void btnGestaResa_Click(object sender, EventArgs e)
+        {
+            MenuReservation menuResa = new MenuReservation();
+            menuResa.Show();
+            this.Hide();
+        }
+
+        private void btnGestaClient_Click(object sender, EventArgs e)
+        {
+            MenuClient menuClient = new MenuClient();
+            menuClient.Show();
+            this.Hide();
+        }
+        private void BntQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
