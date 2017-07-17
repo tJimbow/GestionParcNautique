@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionParcNautique
 {
-    public partial class Form1 : Form
+    public partial class MenuClient : Form
     {
-        public Form1()
+        public MenuClient()
         {
             InitializeComponent();
         }
