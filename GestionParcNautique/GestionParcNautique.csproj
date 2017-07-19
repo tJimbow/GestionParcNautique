@@ -56,7 +56,6 @@
     </Compile>
     <Compile Include="DetailResaEffectif.cs" />
     <Compile Include="DetailResaEquipement.cs" />
-    <Compile Include="Effectif.cs" />
     <Compile Include="Equipement\Equipement.cs" />
     <Compile Include="EquipementParcNautique.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -75,15 +74,17 @@
     <Compile Include="Client\MenuClient.Designer.cs">
       <DependentUpon>MenuClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipement\MenuEquipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipement\MenuEquipement.Designer.cs">
+      <DependentUpon>MenuEquipement.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuEffectif.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuEffectif.Designer.cs">
       <DependentUpon>MenuEffectif.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Equipement\MenuEquipement.cs" />
-    <Compile Include="Equipement\MenuEquipement.Designer.cs">
-      <DependentUpon>MenuEquipement.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuReservation.cs">
       <SubType>Form</SubType>
@@ -98,7 +99,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reservation.cs" />
     <Compile Include="Equipement\SingleEquipement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Equipement\MenuEquipement.resx">
       <DependentUpon>MenuEquipement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuReservation.resx">
-      <DependentUpon>MenuReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

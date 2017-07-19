@@ -154,6 +154,7 @@
             this.btnCloseEquipement.TabIndex = 11;
             this.btnCloseEquipement.Text = "Fermer";
             this.btnCloseEquipement.UseVisualStyleBackColor = true;
+            this.btnCloseEquipement.Click += new System.EventHandler(this.btnCloseEquipement_Click);
             // 
             // SingleEquipement
             // 

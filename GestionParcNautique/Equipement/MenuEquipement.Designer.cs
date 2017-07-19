@@ -53,6 +53,7 @@
             this.etatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puissanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixHTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuAccueil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPrixHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddPuissance)).BeginInit();
@@ -206,7 +207,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(166, 283);
+            this.label5.Location = new System.Drawing.Point(105, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 13);
             this.label5.TabIndex = 3;
@@ -225,7 +226,7 @@
             this.puissanceDataGridViewTextBoxColumn,
             this.prixHTDataGridViewTextBoxColumn});
             this.dataEquipemts.DataSource = this.equipementBindingSource;
-            this.dataEquipemts.Location = new System.Drawing.Point(108, 299);
+            this.dataEquipemts.Location = new System.Drawing.Point(108, 288);
             this.dataEquipemts.Name = "dataEquipemts";
             this.dataEquipemts.ReadOnly = true;
             this.dataEquipemts.Size = new System.Drawing.Size(551, 233);
@@ -268,11 +269,22 @@
             this.prixHTDataGridViewTextBoxColumn.Name = "prixHTDataGridViewTextBoxColumn";
             this.prixHTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // MenuAccueil
+            // 
+            this.MenuAccueil.Location = new System.Drawing.Point(363, 535);
+            this.MenuAccueil.Name = "MenuAccueil";
+            this.MenuAccueil.Size = new System.Drawing.Size(75, 23);
+            this.MenuAccueil.TabIndex = 5;
+            this.MenuAccueil.Text = "Menu";
+            this.MenuAccueil.UseVisualStyleBackColor = true;
+            this.MenuAccueil.Click += new System.EventHandler(this.MenuAccueil_Click);
+            // 
             // MenuEquipement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 535);
+            this.ClientSize = new System.Drawing.Size(760, 570);
+            this.Controls.Add(this.MenuAccueil);
             this.Controls.Add(this.dataEquipemts);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -318,5 +330,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn etatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn puissanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixHTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button MenuAccueil;
     }
 }

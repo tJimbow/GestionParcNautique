@@ -8,23 +8,34 @@ namespace GestionParcNautique
 {
     class Client
     {
-        protected int _id;
-        protected String _nom;
-        protected String _prenom;
-        protected String _adresse;
-        protected int _telephone;
-        protected DateTime _dateNaissance;
-        protected int _numPermisCotier;
+        private String nom;
+        private String prenom;
+        private String adresse;
+        private String telephone;
+        private DateTime dateNaissance;
+        private int numPermisCotier;
 
-        public Client(int Id, string Nom, string Prenom, string Adresse, int Telephone, DateTime DateNaissance, int NumPermisCotier)
+        public string Nom { get => nom; set => nom = value; }
+        public string Prenom { get => prenom; set => prenom = value; }
+        public string Adresse { get => adresse; set => adresse = value; }
+        public string Telephone { get => telephone; set => telephone = value; }
+        public DateTime DateNaissance { get => dateNaissance; set => dateNaissance = value; }
+        public int NumPermisCotier { get => numPermisCotier; set => numPermisCotier = value; }
+
+        public Client(string Nom, string Prenom, string Adresse, string Telephone, DateTime DateNaissance, int NumPermisCotier = 0, bool isNew = false)
         {
-            this._id = Id;
-            this._nom = Nom;
-            this._prenom = Prenom;
-            this._adresse = Adresse;
-            this._telephone = Telephone;
-            this._dateNaissance = DateNaissance;
-            this._numPermisCotier = NumPermisCotier;
+            this.Nom = Nom;
+            this.Prenom = Prenom;
+            this.Adresse = Adresse;
+            this.Telephone = Telephone;
+            this.DateNaissance = DateNaissance;
+            this.NumPermisCotier = NumPermisCotier;
+
+            BddConnexion connect = new BddConnexion();
+            if (isNew)
+            {
+                connect.request("INSERT INTO Client (nom, prenom, adresse, telephone, dateNaissance, numPermisCotier) VALUES ('" + Nom + "','" + Prenom + "','" + Adresse + "','" + Telephone + "','" + DateNaissance + "','" + NumPermisCotier + "')");
+            }
         }
     }
 }

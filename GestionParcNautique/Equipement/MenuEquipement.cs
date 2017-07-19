@@ -74,11 +74,12 @@ namespace GestionParcNautique
 
         private void dataEquipemts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = dataEquipemts.CurrentRow.Index;
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = dataEquipemts.Rows[rowIndex];
             BddConnexion connect = new BddConnexion();
 
             connect.connecter();
-            SqlDataReader incReader = connect.getData("SELECT * FROM Equipement WHERE id = '" + index + "'");
+            SqlDataReader incReader = connect.getData("SELECT * FROM Equipement WHERE id = '" + row.Cells[0].Value + "'");
             Debug.Write(incReader);
             int count = 0;
             while (incReader.Read() && count != 1)
@@ -95,6 +96,13 @@ namespace GestionParcNautique
                 count++;
             }
             connect.deconnecter();
+        }
+
+        private void MenuAccueil_Click(object sender, EventArgs e)
+        {
+            MenuAccueil menuAccueil = new MenuAccueil();
+            this.Close();
+            menuAccueil.Show();
         }
     }
 }
