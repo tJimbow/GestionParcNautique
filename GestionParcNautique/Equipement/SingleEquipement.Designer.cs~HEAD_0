@@ -37,6 +37,9 @@
             this.singlePuissance = new System.Windows.Forms.Label();
             this.singlePrixHT = new System.Windows.Forms.Label();
             this.singleDescriptif = new System.Windows.Forms.Label();
+            this.btnModifEquipement = new System.Windows.Forms.Button();
+            this.btnDelEquipement = new System.Windows.Forms.Button();
+            this.btnLeaveEquipement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // singleNom
@@ -125,11 +128,42 @@
             this.singleDescriptif.Size = new System.Drawing.Size(0, 16);
             this.singleDescriptif.TabIndex = 8;
             // 
+            // btnModifEquipement
+            // 
+            this.btnModifEquipement.Location = new System.Drawing.Point(68, 369);
+            this.btnModifEquipement.Name = "btnModifEquipement";
+            this.btnModifEquipement.Size = new System.Drawing.Size(75, 23);
+            this.btnModifEquipement.TabIndex = 9;
+            this.btnModifEquipement.Text = "Modifier";
+            this.btnModifEquipement.UseVisualStyleBackColor = true;
+            // 
+            // btnDelEquipement
+            // 
+            this.btnDelEquipement.Location = new System.Drawing.Point(266, 368);
+            this.btnDelEquipement.Name = "btnDelEquipement";
+            this.btnDelEquipement.Size = new System.Drawing.Size(75, 23);
+            this.btnDelEquipement.TabIndex = 10;
+            this.btnDelEquipement.Text = "Supprimer";
+            this.btnDelEquipement.UseVisualStyleBackColor = true;
+            // 
+            // btnLeaveEquipement
+            // 
+            this.btnLeaveEquipement.Location = new System.Drawing.Point(476, 368);
+            this.btnLeaveEquipement.Name = "btnLeaveEquipement";
+            this.btnLeaveEquipement.Size = new System.Drawing.Size(75, 23);
+            this.btnLeaveEquipement.TabIndex = 11;
+            this.btnLeaveEquipement.Text = "Quitter";
+            this.btnLeaveEquipement.UseVisualStyleBackColor = true;
+            this.btnLeaveEquipement.Click += new System.EventHandler(this.btnLeaveEquipement_Click);
+            // 
             // SingleEquipement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 443);
+            this.Controls.Add(this.btnLeaveEquipement);
+            this.Controls.Add(this.btnDelEquipement);
+            this.Controls.Add(this.btnModifEquipement);
             this.Controls.Add(this.singleDescriptif);
             this.Controls.Add(this.singlePrixHT);
             this.Controls.Add(this.singlePuissance);
@@ -157,5 +191,8 @@
         private System.Windows.Forms.Label singlePuissance;
         private System.Windows.Forms.Label singlePrixHT;
         private System.Windows.Forms.Label singleDescriptif;
+        private System.Windows.Forms.Button btnModifEquipement;
+        private System.Windows.Forms.Button btnDelEquipement;
+        private System.Windows.Forms.Button btnLeaveEquipement;
     }
 }
