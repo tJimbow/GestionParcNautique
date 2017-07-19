@@ -25,10 +25,5 @@ namespace GestionParcNautique
             singleDescriptif.Text = Description;
             singlePrixHT.Text = PrixHT.ToString();
         }
-
-        private void btnLeaveEquipement_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
