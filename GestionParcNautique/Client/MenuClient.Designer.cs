@@ -85,6 +85,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Console d\'ajout d\'un Client";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label5
             // 
@@ -222,6 +223,7 @@
             this.dataClients.Size = new System.Drawing.Size(816, 276);
             this.dataClients.TabIndex = 3;
             this.dataClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataClients_CellClick);
+            this.dataClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataClients_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

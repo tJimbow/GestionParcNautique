@@ -8,21 +8,36 @@ namespace GestionParcNautique
 {
     class Effectif
     {
-        protected int _numSecuriteSocial;
-        protected DateTime _dateEmbauche;
-        protected DateTime _dateVisiteMedical;
-        protected String _statutContrat;
-        protected int _numPermisCotier;
-        protected String _statutActivite;
+        private int _numSecuriteSocial;
+        private DateTime _dateEmbauche;
+        private DateTime _dateVisiteMedical;
+        private String _statutContrat;
+        private int _numPermisCotier;
+        private String _statutActivite;
+        private String _nom;
 
-        public Effectif(int NumSecuriteSocial, DateTime DateEmbauche, DateTime DateVisiteMedical, string StatutContrat, int NumPermisCotier, string StatutActivite)
+        public int NumSecuriteSocial { get => _numSecuriteSocial; set => _numSecuriteSocial = value; }
+        public DateTime DateEmbauche { get => _dateEmbauche; set => _dateEmbauche = value; }
+        public DateTime DateVisiteMedical { get => _dateVisiteMedical; set => _dateVisiteMedical = value; }
+        public string StatutContrat { get => _statutContrat; set => _statutContrat = value; }
+        public int NumPermisCotier { get => _numPermisCotier; set => _numPermisCotier = value; }
+        public string StatutActivite { get => _statutActivite; set => _statutActivite = value; }
+        public string Nom { get => _nom; set => _nom = value; }
+
+        public Effectif(int numSecuriteSocial, String nom, DateTime dateEmbauche, DateTime dateVisiteMedical, string statutContrat, int numPermisCotier, string statutActivite, bool isNew = false)
         {
-            this._numSecuriteSocial = NumSecuriteSocial;
-            this._dateEmbauche = DateEmbauche;
-            this._dateVisiteMedical = DateVisiteMedical;
-            this._statutContrat = StatutContrat;
-            this._numPermisCotier = NumPermisCotier;
-            this._statutActivite = StatutActivite;
+            NumSecuriteSocial = numSecuriteSocial;
+            DateEmbauche = dateEmbauche;
+            DateVisiteMedical = dateVisiteMedical;
+            StatutContrat = statutContrat;
+            NumPermisCotier = numPermisCotier;
+            StatutActivite = statutActivite;
+            Nom = nom;
+            BddConnexion connect = new BddConnexion();
+            if (isNew)
+            {
+                connect.request("INSERT INTO Effectif (numSecuriteSocial, nom, dateEmbauche, dateVisiteMedical, statutContrat, numPermisCotier, statutActivite) VALUES ('" + NumSecuriteSocial + "','" + Nom + "','" + DateEmbauche + "','" + DateVisiteMedical + "','" + StatutContrat + "','" + NumPermisCotier + "','" + StatutActivite + "')");
+            }
         }
     }
 }

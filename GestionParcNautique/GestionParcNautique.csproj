@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,6 +71,7 @@
     </Compile>
     <Compile Include="DetailResaEffectif.cs" />
     <Compile Include="DetailResaEquipement.cs" />
+    <Compile Include="Effectif\Effectif.cs" />
     <Compile Include="Equipement\Equipement.cs" />
     <Compile Include="EquipementParcNautique.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,10 +96,10 @@
     <Compile Include="Equipement\MenuEquipement.Designer.cs">
       <DependentUpon>MenuEquipement.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuEffectif.cs">
+    <Compile Include="Effectif\MenuEffectif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuEffectif.Designer.cs">
+    <Compile Include="Effectif\MenuEffectif.Designer.cs">
       <DependentUpon>MenuEffectif.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuReservation.cs">
@@ -97,6 +113,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ParcNautiqueDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ParcNautiqueDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParcNautiqueDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Equipement\SingleEquipement.cs">
@@ -105,8 +126,20 @@
     <Compile Include="Equipement\SingleEquipement.Designer.cs">
       <DependentUpon>SingleEquipement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Effectif\SingleEffectif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effectif\SingleEffectif.Designer.cs">
+      <DependentUpon>SingleEffectif.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Client\SingleClient.resx">
       <DependentUpon>SingleClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effectif\MenuEffectif.resx">
+      <DependentUpon>MenuEffectif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effectif\SingleEffectif.resx">
+      <DependentUpon>SingleEffectif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAccueil.resx">
       <DependentUpon>MenuAccueil.cs</DependentUpon>
@@ -151,6 +184,17 @@
     <None Include="ParcNautiqueDataSet.xss">
       <DependentUpon>ParcNautiqueDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ParcNautiqueDataSet1.xsc">
+      <DependentUpon>ParcNautiqueDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ParcNautiqueDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ParcNautiqueDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ParcNautiqueDataSet1.xss">
+      <DependentUpon>ParcNautiqueDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,7 +208,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

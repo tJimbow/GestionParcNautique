@@ -68,7 +68,6 @@ namespace GestionParcNautique
             {
                 LabelLog.Text = "Vous avez oublié de renseigner un champ";
             }
-
         }
 
         private void dataClients_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -102,6 +101,16 @@ namespace GestionParcNautique
             MenuAccueil menuAccueil = new MenuAccueil();
             this.Close();
             menuAccueil.Show();
+        }
+
+        private void dataClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
