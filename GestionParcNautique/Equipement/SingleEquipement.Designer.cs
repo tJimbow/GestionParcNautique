@@ -37,6 +37,9 @@
             this.singlePuissance = new System.Windows.Forms.Label();
             this.singlePrixHT = new System.Windows.Forms.Label();
             this.singleDescriptif = new System.Windows.Forms.Label();
+            this.btnModifEquipement = new System.Windows.Forms.Button();
+            this.btnSupEquipement = new System.Windows.Forms.Button();
+            this.btnCloseEquipement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // singleNom
@@ -125,11 +128,41 @@
             this.singleDescriptif.Size = new System.Drawing.Size(0, 16);
             this.singleDescriptif.TabIndex = 8;
             // 
+            // btnModifEquipement
+            // 
+            this.btnModifEquipement.Location = new System.Drawing.Point(68, 372);
+            this.btnModifEquipement.Name = "btnModifEquipement";
+            this.btnModifEquipement.Size = new System.Drawing.Size(75, 23);
+            this.btnModifEquipement.TabIndex = 9;
+            this.btnModifEquipement.Text = "Modifier";
+            this.btnModifEquipement.UseVisualStyleBackColor = true;
+            // 
+            // btnSupEquipement
+            // 
+            this.btnSupEquipement.Location = new System.Drawing.Point(270, 372);
+            this.btnSupEquipement.Name = "btnSupEquipement";
+            this.btnSupEquipement.Size = new System.Drawing.Size(75, 23);
+            this.btnSupEquipement.TabIndex = 10;
+            this.btnSupEquipement.Text = "Supprimer";
+            this.btnSupEquipement.UseVisualStyleBackColor = true;
+            // 
+            // btnCloseEquipement
+            // 
+            this.btnCloseEquipement.Location = new System.Drawing.Point(460, 372);
+            this.btnCloseEquipement.Name = "btnCloseEquipement";
+            this.btnCloseEquipement.Size = new System.Drawing.Size(75, 23);
+            this.btnCloseEquipement.TabIndex = 11;
+            this.btnCloseEquipement.Text = "Fermer";
+            this.btnCloseEquipement.UseVisualStyleBackColor = true;
+            // 
             // SingleEquipement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 443);
+            this.Controls.Add(this.btnCloseEquipement);
+            this.Controls.Add(this.btnSupEquipement);
+            this.Controls.Add(this.btnModifEquipement);
             this.Controls.Add(this.singleDescriptif);
             this.Controls.Add(this.singlePrixHT);
             this.Controls.Add(this.singlePuissance);
@@ -157,5 +190,8 @@
         private System.Windows.Forms.Label singlePuissance;
         private System.Windows.Forms.Label singlePrixHT;
         private System.Windows.Forms.Label singleDescriptif;
+        private System.Windows.Forms.Button btnModifEquipement;
+        private System.Windows.Forms.Button btnSupEquipement;
+        private System.Windows.Forms.Button btnCloseEquipement;
     }
 }
