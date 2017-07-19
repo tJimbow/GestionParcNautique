@@ -51,7 +51,7 @@
     <Compile Include="DetailResaEffectif.cs" />
     <Compile Include="DetailResaEquipement.cs" />
     <Compile Include="Effectif.cs" />
-    <Compile Include="Equipement.cs" />
+    <Compile Include="Equipement\Equipement.cs" />
     <Compile Include="EquipementParcNautique.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,10 +75,10 @@
     <Compile Include="MenuEffectif.Designer.cs">
       <DependentUpon>MenuEffectif.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuEquipement.cs">
+    <Compile Include="Equipement\MenuEquipement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuEquipement.Designer.cs">
+    <Compile Include="Equipement\MenuEquipement.Designer.cs">
       <DependentUpon>MenuEquipement.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuReservation.cs">
@@ -90,10 +90,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
-    <Compile Include="SingleEquipement.cs">
+    <Compile Include="Equipement\SingleEquipement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SingleEquipement.Designer.cs">
+    <Compile Include="Equipement\SingleEquipement.Designer.cs">
       <DependentUpon>SingleEquipement.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MenuAccueil.resx">
@@ -102,7 +102,7 @@
     <EmbeddedResource Include="MenuClient.resx">
       <DependentUpon>MenuClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuEquipement.resx">
+    <EmbeddedResource Include="Equipement\MenuEquipement.resx">
       <DependentUpon>MenuEquipement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuReservation.resx">
@@ -117,7 +117,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SingleEquipement.resx">
+    <EmbeddedResource Include="Equipement\SingleEquipement.resx">
       <DependentUpon>SingleEquipement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EquipementParcNautique.xsc">
