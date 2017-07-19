@@ -47,11 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BddConnexion.cs" />
-    <Compile Include="Client.cs" />
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="Client\SingleClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\SingleClient.Designer.cs">
+      <DependentUpon>SingleClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailResaEffectif.cs" />
     <Compile Include="DetailResaEquipement.cs" />
     <Compile Include="Effectif.cs" />
-    <Compile Include="Equipement.cs" />
+    <Compile Include="Equipement\Equipement.cs" />
     <Compile Include="EquipementParcNautique.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,10 +69,10 @@
     <Compile Include="MenuAccueil.Designer.cs">
       <DependentUpon>MenuAccueil.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuClient.cs">
+    <Compile Include="Client\MenuClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuClient.Designer.cs">
+    <Compile Include="Client\MenuClient.Designer.cs">
       <DependentUpon>MenuClient.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuEffectif.cs">
@@ -75,10 +81,8 @@
     <Compile Include="MenuEffectif.Designer.cs">
       <DependentUpon>MenuEffectif.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuEquipement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuEquipement.Designer.cs">
+    <Compile Include="Equipement\MenuEquipement.cs" />
+    <Compile Include="Equipement\MenuEquipement.Designer.cs">
       <DependentUpon>MenuEquipement.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuReservation.cs">
@@ -87,22 +91,30 @@
     <Compile Include="MenuReservation.Designer.cs">
       <DependentUpon>MenuReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParcNautiqueDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParcNautiqueDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
-    <Compile Include="SingleEquipement.cs">
+    <Compile Include="Equipement\SingleEquipement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SingleEquipement.Designer.cs">
+    <Compile Include="Equipement\SingleEquipement.Designer.cs">
       <DependentUpon>SingleEquipement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Client\SingleClient.resx">
+      <DependentUpon>SingleClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuAccueil.resx">
       <DependentUpon>MenuAccueil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuClient.resx">
+    <EmbeddedResource Include="Client\MenuClient.resx">
       <DependentUpon>MenuClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuEquipement.resx">
+    <EmbeddedResource Include="Equipement\MenuEquipement.resx">
       <DependentUpon>MenuEquipement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuReservation.resx">
@@ -117,7 +129,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SingleEquipement.resx">
+    <EmbeddedResource Include="Equipement\SingleEquipement.resx">
       <DependentUpon>SingleEquipement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EquipementParcNautique.xsc">
@@ -130,6 +142,17 @@
     </None>
     <None Include="EquipementParcNautique.xss">
       <DependentUpon>EquipementParcNautique.xsd</DependentUpon>
+    </None>
+    <None Include="ParcNautiqueDataSet.xsc">
+      <DependentUpon>ParcNautiqueDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ParcNautiqueDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ParcNautiqueDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ParcNautiqueDataSet.xss">
+      <DependentUpon>ParcNautiqueDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -144,6 +167,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
