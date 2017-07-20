@@ -15,12 +15,23 @@ namespace GestionParcNautique
         protected int _puissance;
         protected String _etat;
         protected float _prixHt;
+        private List<int> equipementAcc = new List<int>();
 
         public string Nom { get => _nom; set => _nom = value; }
         public string Descriptif { get => _descriptif; set => _descriptif = value; }
         public string Etat { get => _etat; set => _etat = value; }
         public int Puissance { get => _puissance; set => _puissance = value; }
         public float PrixHT { get => _prixHt; set => _prixHt = value; }
+        public List<int> EquipementAcc { get => equipementAcc; set => equipementAcc = value; }
+
+        public List<int> getEquipementAcc()
+        {
+            equipementAcc.Add(12);
+            equipementAcc.Add(13);
+            equipementAcc.Add(16);
+            equipementAcc.Add(17);
+            return EquipementAcc;
+        }
 
         public Equipement()
         {

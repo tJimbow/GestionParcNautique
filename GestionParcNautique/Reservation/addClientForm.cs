@@ -41,6 +41,7 @@ namespace GestionParcNautique
             try {
                 client = int.Parse(dr.ItemArray[0].ToString());
                 menuParent.chgeName(dr.ItemArray[1].ToString() + " " + dr.ItemArray[2].ToString());
+                menuParent.addIdClient(client);
                 this.Close();
             }
             catch (Exception)
