@@ -86,7 +86,6 @@ namespace GestionParcNautique
 
             connect.connecter();
             SqlDataReader incReader = connect.getData("SELECT * FROM Effectif WHERE numSecuriteSocial = '" + row.Cells[0].Value + "'");
-            Debug.Write(incReader);
             int count = 0;
             while (incReader.Read() && count != 1)
             {

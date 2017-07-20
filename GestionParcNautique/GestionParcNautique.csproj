@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reservation\AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation\AddClientForm.Designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BddConnexion.cs" />
     <Compile Include="Client\Client.cs" />
     <Compile Include="Client\SingleClient.cs">
@@ -102,10 +108,10 @@
     <Compile Include="Effectif\MenuEffectif.Designer.cs">
       <DependentUpon>MenuEffectif.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuReservation.cs">
+    <Compile Include="Reservation\MenuReservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuReservation.Designer.cs">
+    <Compile Include="Reservation\MenuReservation.Designer.cs">
       <DependentUpon>MenuReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="ParcNautiqueDataSet.Designer.cs">
@@ -132,6 +138,7 @@
     <Compile Include="Effectif\SingleEffectif.Designer.cs">
       <DependentUpon>SingleEffectif.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reservation\Reservation.cs" />
     <EmbeddedResource Include="Client\SingleClient.resx">
       <DependentUpon>SingleClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +168,12 @@
     </Compile>
     <EmbeddedResource Include="Equipement\SingleEquipement.resx">
       <DependentUpon>SingleEquipement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation\AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation\MenuReservation.resx">
+      <DependentUpon>MenuReservation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EquipementParcNautique.xsc">
       <DependentUpon>EquipementParcNautique.xsd</DependentUpon>

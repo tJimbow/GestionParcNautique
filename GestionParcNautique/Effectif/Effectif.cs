@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,28 @@ namespace GestionParcNautique
             {
                 connect.request("INSERT INTO Effectif (numSecuriteSocial, nom, dateEmbauche, dateVisiteMedical, statutContrat, numPermisCotier, statutActivite) VALUES ('" + NumSecuriteSocial + "','" + Nom + "','" + DateEmbauche + "','" + DateVisiteMedical + "','" + StatutContrat + "','" + NumPermisCotier + "','" + StatutActivite + "')");
             }
+        }
+
+        public bool hasLicence(int id = 0)
+        {
+            BddConnexion connect = new BddConnexion();
+            if (id != 0)
+            {
+                connect.connecter();
+                SqlDataReader incReader = connect.getData("SELECT * FROM Effectif WHERE numSecuriteSocial = '" + id + "'");
+                int count = 0;
+                while (incReader.Read() && count != 1)
+                {
+                    int numPermisCotier = int.Parse(incReader["numPermisCotier"].ToString());
+                    if(numPermisCotier != 0)
+                    {
+                        return true;
+                    }
+                    count++;
+                }
+                connect.deconnecter();
+            }
+            return false;
         }
     }
 }
