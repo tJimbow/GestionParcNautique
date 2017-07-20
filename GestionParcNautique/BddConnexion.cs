@@ -52,6 +52,24 @@ namespace GestionParcNautique
             }
         }
 
+        public int requestGetIdBack(String request)
+        {
+            int id = 0;
+            try
+            {
+                this.connecter();
+                SqlCommand command = new SqlCommand(request, con);
+                id = int.Parse(command.ExecuteScalar().ToString());
+                this.deconnecter();
+
+            }
+            catch (Exception ex)
+            {
+                Debug.Write("Erreur lors de la création de la requête : " + request);
+                Debug.Write(ex.Message);
+            }
+            return id;
+        }
         public SqlDataReader getData(String request)
         {
             this.connecter();

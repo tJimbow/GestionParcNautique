@@ -50,8 +50,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.addDateFin = new System.Windows.Forms.DateTimePicker();
+            this.addDateDebut = new System.Windows.Forms.DateTimePicker();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.parcNautiqueDataSet = new GestionParcNautique.ParcNautiqueDataSet();
             this.equipementParcNautique = new GestionParcNautique.EquipementParcNautique();
@@ -66,6 +66,7 @@
             this.nomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.effectifTableAdapter = new GestionParcNautique.ParcNautiqueDataSet1TableAdapters.EffectifTableAdapter();
             this.btnAddReservation = new System.Windows.Forms.Button();
+            this.MessageError = new System.Windows.Forms.Label();
             this.groupeAddResa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.effectifGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.effectifBindingSource)).BeginInit();
@@ -83,6 +84,7 @@
             // 
             // groupeAddResa
             // 
+            this.groupeAddResa.Controls.Add(this.MessageError);
             this.groupeAddResa.Controls.Add(this.btnAddReservation);
             this.groupeAddResa.Controls.Add(this.effectifGridView);
             this.groupeAddResa.Controls.Add(this.AddEquipementView);
@@ -93,8 +95,8 @@
             this.groupeAddResa.Controls.Add(this.label4);
             this.groupeAddResa.Controls.Add(this.label3);
             this.groupeAddResa.Controls.Add(this.label2);
-            this.groupeAddResa.Controls.Add(this.dateTimePicker2);
-            this.groupeAddResa.Controls.Add(this.dateTimePicker1);
+            this.groupeAddResa.Controls.Add(this.addDateFin);
+            this.groupeAddResa.Controls.Add(this.addDateDebut);
             this.groupeAddResa.Location = new System.Drawing.Point(13, 13);
             this.groupeAddResa.Name = "groupeAddResa";
             this.groupeAddResa.Size = new System.Drawing.Size(779, 367);
@@ -171,6 +173,7 @@
             this.prixHT});
             this.AddEquipementView.DataSource = this.equipementBindingSource;
             this.AddEquipementView.Location = new System.Drawing.Point(10, 36);
+            this.AddEquipementView.MultiSelect = false;
             this.AddEquipementView.Name = "AddEquipementView";
             this.AddEquipementView.ReadOnly = true;
             this.AddEquipementView.Size = new System.Drawing.Size(515, 140);
@@ -276,19 +279,19 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Date de début";
             // 
-            // dateTimePicker2
+            // addDateFin
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(214, 195);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 5;
+            this.addDateFin.Location = new System.Drawing.Point(214, 195);
+            this.addDateFin.Name = "addDateFin";
+            this.addDateFin.Size = new System.Drawing.Size(200, 20);
+            this.addDateFin.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // addDateDebut
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 195);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.addDateDebut.Location = new System.Drawing.Point(6, 195);
+            this.addDateDebut.Name = "addDateDebut";
+            this.addDateDebut.Size = new System.Drawing.Size(200, 20);
+            this.addDateDebut.TabIndex = 4;
             // 
             // clientBindingSource1
             // 
@@ -366,6 +369,16 @@
             this.btnAddReservation.TabIndex = 16;
             this.btnAddReservation.Text = "Valider";
             this.btnAddReservation.UseVisualStyleBackColor = true;
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
+            // 
+            // MessageError
+            // 
+            this.MessageError.AutoSize = true;
+            this.MessageError.BackColor = System.Drawing.SystemColors.Control;
+            this.MessageError.Location = new System.Drawing.Point(534, 315);
+            this.MessageError.Name = "MessageError";
+            this.MessageError.Size = new System.Drawing.Size(0, 13);
+            this.MessageError.TabIndex = 17;
             // 
             // MenuReservation
             // 
@@ -402,8 +415,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker addDateFin;
+        private System.Windows.Forms.DateTimePicker addDateDebut;
         private ParcNautiqueDataSet1 parcNautiqueDataSet1;
         private System.Windows.Forms.BindingSource equipementParcNautiqueBindingSource;
         private EquipementParcNautique equipementParcNautique;
@@ -433,5 +446,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numPermisCotierDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statutActiviteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAddReservation;
+        private System.Windows.Forms.Label MessageError;
     }
 }
