@@ -134,5 +134,12 @@ namespace GestionParcNautique
 
             }
         }
+
+        private void btnReturnMenu_Click(object sender, EventArgs e)
+        {
+            MenuAccueil menuAccueil = new MenuAccueil();
+            this.Close();
+            menuAccueil.Show();
+        }
     }
 }

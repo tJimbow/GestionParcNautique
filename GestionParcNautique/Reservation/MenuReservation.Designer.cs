@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupeAddResa = new System.Windows.Forms.GroupBox();
+            this.MessageError = new System.Windows.Forms.Label();
+            this.btnAddReservation = new System.Windows.Forms.Button();
             this.effectifGridView = new System.Windows.Forms.DataGridView();
             this.numSecuriteSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,8 +67,7 @@
             this.numPermisCotier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.effectifTableAdapter = new GestionParcNautique.ParcNautiqueDataSet1TableAdapters.EffectifTableAdapter();
-            this.btnAddReservation = new System.Windows.Forms.Button();
-            this.MessageError = new System.Windows.Forms.Label();
+            this.btnReturnMenu = new System.Windows.Forms.Button();
             this.groupeAddResa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.effectifGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.effectifBindingSource)).BeginInit();
@@ -103,6 +104,25 @@
             this.groupeAddResa.TabIndex = 0;
             this.groupeAddResa.TabStop = false;
             this.groupeAddResa.Text = "Ajouter une reservation";
+            // 
+            // MessageError
+            // 
+            this.MessageError.AutoSize = true;
+            this.MessageError.BackColor = System.Drawing.SystemColors.Control;
+            this.MessageError.Location = new System.Drawing.Point(534, 315);
+            this.MessageError.Name = "MessageError";
+            this.MessageError.Size = new System.Drawing.Size(0, 13);
+            this.MessageError.TabIndex = 17;
+            // 
+            // btnAddReservation
+            // 
+            this.btnAddReservation.Location = new System.Drawing.Point(703, 337);
+            this.btnAddReservation.Name = "btnAddReservation";
+            this.btnAddReservation.Size = new System.Drawing.Size(75, 23);
+            this.btnAddReservation.TabIndex = 16;
+            this.btnAddReservation.Text = "Valider";
+            this.btnAddReservation.UseVisualStyleBackColor = true;
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
             // effectifGridView
             // 
@@ -361,30 +381,22 @@
             // 
             this.effectifTableAdapter.ClearBeforeFill = true;
             // 
-            // btnAddReservation
+            // btnReturnMenu
             // 
-            this.btnAddReservation.Location = new System.Drawing.Point(703, 337);
-            this.btnAddReservation.Name = "btnAddReservation";
-            this.btnAddReservation.Size = new System.Drawing.Size(75, 23);
-            this.btnAddReservation.TabIndex = 16;
-            this.btnAddReservation.Text = "Valider";
-            this.btnAddReservation.UseVisualStyleBackColor = true;
-            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
-            // 
-            // MessageError
-            // 
-            this.MessageError.AutoSize = true;
-            this.MessageError.BackColor = System.Drawing.SystemColors.Control;
-            this.MessageError.Location = new System.Drawing.Point(534, 315);
-            this.MessageError.Name = "MessageError";
-            this.MessageError.Size = new System.Drawing.Size(0, 13);
-            this.MessageError.TabIndex = 17;
+            this.btnReturnMenu.Location = new System.Drawing.Point(378, 587);
+            this.btnReturnMenu.Name = "btnReturnMenu";
+            this.btnReturnMenu.Size = new System.Drawing.Size(75, 23);
+            this.btnReturnMenu.TabIndex = 1;
+            this.btnReturnMenu.Text = "Menu";
+            this.btnReturnMenu.UseVisualStyleBackColor = true;
+            this.btnReturnMenu.Click += new System.EventHandler(this.btnReturnMenu_Click);
             // 
             // MenuReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 622);
+            this.Controls.Add(this.btnReturnMenu);
             this.Controls.Add(this.groupeAddResa);
             this.Name = "MenuReservation";
             this.Text = "MenuReservation";
@@ -447,5 +459,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statutActiviteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAddReservation;
         private System.Windows.Forms.Label MessageError;
+        private System.Windows.Forms.Button btnReturnMenu;
     }
 }
