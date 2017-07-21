@@ -40,6 +40,7 @@
             this.btnModifEquipement = new System.Windows.Forms.Button();
             this.btnSupEquipement = new System.Windows.Forms.Button();
             this.btnCloseEquipement = new System.Windows.Forms.Button();
+            this.obId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // singleNom
@@ -145,6 +146,7 @@
             this.btnSupEquipement.TabIndex = 10;
             this.btnSupEquipement.Text = "Supprimer";
             this.btnSupEquipement.UseVisualStyleBackColor = true;
+            this.btnSupEquipement.Click += new System.EventHandler(this.btnSupEquipement_Click);
             // 
             // btnCloseEquipement
             // 
@@ -156,11 +158,22 @@
             this.btnCloseEquipement.UseVisualStyleBackColor = true;
             this.btnCloseEquipement.Click += new System.EventHandler(this.btnCloseEquipement_Click);
             // 
+            // obId
+            // 
+            this.obId.AutoSize = true;
+            this.obId.Location = new System.Drawing.Point(302, 356);
+            this.obId.Name = "obId";
+            this.obId.Size = new System.Drawing.Size(16, 13);
+            this.obId.TabIndex = 12;
+            this.obId.Text = "Id";
+            this.obId.Visible = false;
+            // 
             // SingleEquipement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 443);
+            this.Controls.Add(this.obId);
             this.Controls.Add(this.btnCloseEquipement);
             this.Controls.Add(this.btnSupEquipement);
             this.Controls.Add(this.btnModifEquipement);
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Button btnModifEquipement;
         private System.Windows.Forms.Button btnSupEquipement;
         private System.Windows.Forms.Button btnCloseEquipement;
+        private System.Windows.Forms.Label obId;
     }
 }

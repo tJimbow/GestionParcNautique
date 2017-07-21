@@ -12,12 +12,15 @@ namespace GestionParcNautique
 {
     public partial class SingleClient : Form
     {
-        public SingleClient()
+        MenuClient menu = new MenuClient();
+        public SingleClient(MenuClient incMenu)
         {
             InitializeComponent();
+            menu = incMenu;
         }
-        public void loadData(String nom, String prenom, String adresse, String telephone, DateTime dateNaissance, int numPermisCotier)
+        public void loadData(int Id, String nom, String prenom, String adresse, String telephone, DateTime dateNaissance, int numPermisCotier)
         {
+            obId.Text = Id.ToString();
             singleNom.Text = nom + " " +prenom;
             singleAdresse.Text = adresse;
             singleTelephone.Text = telephone;
@@ -26,6 +29,17 @@ namespace GestionParcNautique
         }
         private void btnLeaveEquipement_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnDelClient_Click(object sender, EventArgs e)
+        {
+            String id = obId.Text;
+            BddConnexion connect = new BddConnexion();
+            connect.connecter();
+            connect.request("DELETE FROM Client WHERE id = '" + id + "'");
+            connect.deconnecter();
+            menu.maj_datagridView();
             this.Close();
         }
     }

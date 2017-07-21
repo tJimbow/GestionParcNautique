@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLeaveEquipement = new System.Windows.Forms.Button();
-            this.btnDelEquipement = new System.Windows.Forms.Button();
+            this.btnDelClient = new System.Windows.Forms.Button();
             this.btnModifEquipement = new System.Windows.Forms.Button();
             this.singlePermisCotier = new System.Windows.Forms.Label();
             this.singleDateNaissance = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.singleNom = new System.Windows.Forms.Label();
+            this.obId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLeaveEquipement
@@ -52,14 +53,15 @@
             this.btnLeaveEquipement.UseVisualStyleBackColor = true;
             this.btnLeaveEquipement.Click += new System.EventHandler(this.btnLeaveEquipement_Click);
             // 
-            // btnDelEquipement
+            // btnDelClient
             // 
-            this.btnDelEquipement.Location = new System.Drawing.Point(262, 389);
-            this.btnDelEquipement.Name = "btnDelEquipement";
-            this.btnDelEquipement.Size = new System.Drawing.Size(75, 23);
-            this.btnDelEquipement.TabIndex = 22;
-            this.btnDelEquipement.Text = "Supprimer";
-            this.btnDelEquipement.UseVisualStyleBackColor = true;
+            this.btnDelClient.Location = new System.Drawing.Point(262, 389);
+            this.btnDelClient.Name = "btnDelClient";
+            this.btnDelClient.Size = new System.Drawing.Size(75, 23);
+            this.btnDelClient.TabIndex = 22;
+            this.btnDelClient.Text = "Supprimer";
+            this.btnDelClient.UseVisualStyleBackColor = true;
+            this.btnDelClient.Click += new System.EventHandler(this.btnDelClient_Click);
             // 
             // btnModifEquipement
             // 
@@ -156,13 +158,24 @@
             this.singleNom.TabIndex = 12;
             this.singleNom.Text = "Nom du client";
             // 
+            // obId
+            // 
+            this.obId.AutoSize = true;
+            this.obId.Location = new System.Drawing.Point(290, 373);
+            this.obId.Name = "obId";
+            this.obId.Size = new System.Drawing.Size(16, 13);
+            this.obId.TabIndex = 24;
+            this.obId.Text = "Id";
+            this.obId.Visible = false;
+            // 
             // SingleClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 442);
+            this.Controls.Add(this.obId);
             this.Controls.Add(this.btnLeaveEquipement);
-            this.Controls.Add(this.btnDelEquipement);
+            this.Controls.Add(this.btnDelClient);
             this.Controls.Add(this.btnModifEquipement);
             this.Controls.Add(this.singlePermisCotier);
             this.Controls.Add(this.singleDateNaissance);
@@ -183,7 +196,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnLeaveEquipement;
-        private System.Windows.Forms.Button btnDelEquipement;
+        private System.Windows.Forms.Button btnDelClient;
         private System.Windows.Forms.Button btnModifEquipement;
         private System.Windows.Forms.Label singlePermisCotier;
         private System.Windows.Forms.Label singleDateNaissance;
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label singleNom;
+        private System.Windows.Forms.Label obId;
     }
 }

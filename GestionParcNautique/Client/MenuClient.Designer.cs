@@ -92,13 +92,18 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(335, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 13);
+            this.label5.Size = new System.Drawing.Size(121, 13);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Numéroe de permis côtier";
+            this.label5.Text = "Numéro de permis côtier";
             // 
             // AddNumPermisCotier
             // 
             this.AddNumPermisCotier.Location = new System.Drawing.Point(338, 117);
+            this.AddNumPermisCotier.Maximum = new decimal(new int[] {
+            -402653185,
+            -1613725636,
+            54210108,
+            0});
             this.AddNumPermisCotier.Name = "AddNumPermisCotier";
             this.AddNumPermisCotier.Size = new System.Drawing.Size(207, 20);
             this.AddNumPermisCotier.TabIndex = 15;

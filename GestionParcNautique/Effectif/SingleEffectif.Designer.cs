@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnLeaveEquipement = new System.Windows.Forms.Button();
-            this.btnDelEquipement = new System.Windows.Forms.Button();
             this.btnModifEquipement = new System.Windows.Forms.Button();
             this.singlePermisCotier = new System.Windows.Forms.Label();
             this.singleDateVM = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@
             // 
             // btnLeaveEquipement
             // 
-            this.btnLeaveEquipement.Location = new System.Drawing.Point(478, 388);
+            this.btnLeaveEquipement.Location = new System.Drawing.Point(372, 388);
             this.btnLeaveEquipement.Name = "btnLeaveEquipement";
             this.btnLeaveEquipement.Size = new System.Drawing.Size(75, 23);
             this.btnLeaveEquipement.TabIndex = 35;
@@ -56,18 +55,9 @@
             this.btnLeaveEquipement.UseVisualStyleBackColor = true;
             this.btnLeaveEquipement.Click += new System.EventHandler(this.btnLeaveEquipement_Click);
             // 
-            // btnDelEquipement
-            // 
-            this.btnDelEquipement.Location = new System.Drawing.Point(268, 388);
-            this.btnDelEquipement.Name = "btnDelEquipement";
-            this.btnDelEquipement.Size = new System.Drawing.Size(75, 23);
-            this.btnDelEquipement.TabIndex = 34;
-            this.btnDelEquipement.Text = "Supprimer";
-            this.btnDelEquipement.UseVisualStyleBackColor = true;
-            // 
             // btnModifEquipement
             // 
-            this.btnModifEquipement.Location = new System.Drawing.Point(70, 389);
+            this.btnModifEquipement.Location = new System.Drawing.Point(170, 388);
             this.btnModifEquipement.Name = "btnModifEquipement";
             this.btnModifEquipement.Size = new System.Drawing.Size(75, 23);
             this.btnModifEquipement.TabIndex = 33;
@@ -208,7 +198,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnLeaveEquipement);
-            this.Controls.Add(this.btnDelEquipement);
             this.Controls.Add(this.btnModifEquipement);
             this.Controls.Add(this.singlePermisCotier);
             this.Controls.Add(this.singleDateVM);
@@ -229,7 +218,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLeaveEquipement;
-        private System.Windows.Forms.Button btnDelEquipement;
         private System.Windows.Forms.Button btnModifEquipement;
         private System.Windows.Forms.Label singlePermisCotier;
         private System.Windows.Forms.Label singleDateVM;

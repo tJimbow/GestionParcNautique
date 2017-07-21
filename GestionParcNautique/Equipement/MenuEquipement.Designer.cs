@@ -172,6 +172,11 @@
             // AddPuissance
             // 
             this.AddPuissance.Location = new System.Drawing.Point(255, 56);
+            this.AddPuissance.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.AddPuissance.Name = "AddPuissance";
             this.AddPuissance.Size = new System.Drawing.Size(120, 20);
             this.AddPuissance.TabIndex = 3;

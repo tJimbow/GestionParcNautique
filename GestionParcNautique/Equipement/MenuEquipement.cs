@@ -20,7 +20,7 @@ namespace GestionParcNautique
             InitializeComponent();
         }
 
-        private void maj_datagridView()
+        public void maj_datagridView()
         {
             BddConnexion connect = new BddConnexion();
             DataTable dt = new DataTable();
@@ -90,8 +90,8 @@ namespace GestionParcNautique
                 float prixHT = float.Parse(incReader["prixHT"].ToString());
                 String etat = (string)incReader["etat"];
                 Equipement equip = new Equipement(nom, descriptif, puissance, prixHT, etat);
-                SingleEquipement displayEquipement = new SingleEquipement();
-                displayEquipement.loadData(equip.Etat, equip.Puissance, equip.PrixHT, equip.Descriptif, equip.Nom);
+                SingleEquipement displayEquipement = new SingleEquipement(this);
+                displayEquipement.loadData(int.Parse(incReader["id"].ToString()), equip.Etat, equip.Puissance, equip.PrixHT, equip.Descriptif, equip.Nom);
                 displayEquipement.Show();
                 count++;
             }

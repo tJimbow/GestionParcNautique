@@ -21,7 +21,7 @@ namespace GestionParcNautique
             //this.OnFormClosing(menuAccueil.Show());
         }
 
-        private void maj_datagridView()
+        public void maj_datagridView()
         {
             BddConnexion connect = new BddConnexion();
             DataTable dt = new DataTable();
@@ -88,8 +88,8 @@ namespace GestionParcNautique
                 String telephone = (string)incReader["telephone"];
                 DateTime date = DateTime.Parse(incReader["dateNaissance"].ToString());
                 int numPermisCotier = int.Parse(incReader["numPermisCotier"].ToString());
-                SingleClient displayClient = new SingleClient();
-                displayClient.loadData(nom, prenom, adresse, telephone, date, numPermisCotier);
+                SingleClient displayClient = new SingleClient(this);
+                displayClient.loadData(int.Parse(incReader["id"].ToString()), nom, prenom, adresse, telephone, date, numPermisCotier);
                 displayClient.Show();
                 count++;
             }

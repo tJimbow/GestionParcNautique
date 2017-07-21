@@ -75,8 +75,6 @@
     <Compile Include="Client\SingleClient.Designer.cs">
       <DependentUpon>SingleClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetailResaEffectif.cs" />
-    <Compile Include="DetailResaEquipement.cs" />
     <Compile Include="Effectif\Effectif.cs" />
     <Compile Include="Equipement\Equipement.cs" />
     <Compile Include="EquipementParcNautique.Designer.cs">
