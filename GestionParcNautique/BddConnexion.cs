@@ -17,7 +17,7 @@ namespace GestionParcNautique
         public DataSet ds = new DataSet();
 
         public object ConectionState { get; private set; }
-
+        //Methode pour se connecter
         public void connecter()
         {
             if (con.State == ConnectionState.Closed)
@@ -27,6 +27,7 @@ namespace GestionParcNautique
             }
 
         }
+        //Methode pour se déconnecter si la connexion existe
         public void deconnecter()
         {
             if (con.State == ConnectionState.Open)
@@ -34,7 +35,7 @@ namespace GestionParcNautique
                 con.Close();
             }
         }
-
+        //Exécute une requête sql sans valeur de retour
         public void request(String request)
         {
             try
@@ -51,7 +52,7 @@ namespace GestionParcNautique
                 Debug.Write(ex.Message);
             }
         }
-
+        //Exécute une requête et récupère l'id de cette requête (adapté pour des INSERT)
         public int requestGetIdBack(String request)
         {
             int id = 0;
@@ -70,6 +71,7 @@ namespace GestionParcNautique
             }
             return id;
         }
+        //Récupère toutes les  données d'une requête sql
         public SqlDataReader getData(String request)
         {
             this.connecter();
@@ -77,7 +79,7 @@ namespace GestionParcNautique
             SqlDataReader reader = command.ExecuteReader();
             return reader;
         }
-
+        //Obsolète
         public SqlDataReader Afficher(string requette)
         {
             connecter();
