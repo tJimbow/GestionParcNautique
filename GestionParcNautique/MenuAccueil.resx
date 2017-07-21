@@ -126,16 +126,16 @@
     <value>Microsoft Sans Serif, 20pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 30</value>
+    <value>25, 33</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 31</value>
+    <value>344, 31</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Bienvenu sur GestaNautisme !</value>
+    <value>Bienvenu sur Dynamic Jet !</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
